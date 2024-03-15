@@ -21,7 +21,7 @@ CarShopApp is a C++ application designed to manage information about cars. It al
 3. Build the application using CMake:
     ```bash
     cmake -B out/
-    cmake --B out/
+    cmake --build out/
     ```
 4. Run the application with desired command line parameters, e.g.:
     ```bash
