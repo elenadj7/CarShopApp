@@ -76,8 +76,15 @@ int main(int argc, char** argv){
     else if(command == "delete"){
         
         if(argc == 3){
-            db.deleteCar(std::stoi(argv[2]));
-            std::cout << "Car successfully deleted!" << std::endl;
+            
+            if(!csa::isNumber(argv[2])){
+                std::cout << "Pass the number after the delete command" << std::endl;
+            }
+            else{
+                db.deleteCar(std::stoi(argv[2]));
+                std::cout << "Car successfully deleted!" << std::endl;
+            }
+            
         }
         else{
             std::cout << "Pass the id after the delete command" << std::endl;
